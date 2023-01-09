@@ -18,14 +18,16 @@ app.get("/notes", (req, res) => {
 });
 
 app.get("/api/notes", (req, res) => {
-  res.json(database);
+  fs.readFile("./db/db.json", "utf8", (err, data) => {
+    res.json(JSON.parse(data));
+  });
   // console.info(database);
 });
 
 app.post("/api/notes", (req, res) => {
   console.info(`${req.method} request received to add a note`);
 
-  const { title, text, id } = req.body;
+  const { title, text } = req.body;
 
   if (title && text) {
     const newNote = {
