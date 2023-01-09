@@ -60,10 +60,13 @@ app.post("/api/notes", (req, res) => {
   }
 });
 
-app.delete("/api/notes/:id", (req, res) => {
-  let id = req.params.id;
-  delete database[id];
-});
+// DELETE request to delete notes
+// app.delete("/api/notes/:id", (req, res) => {
+//   let id = req.params.id;
+//   fs.readFile("./db/db.json", "utf8", (err, data) => {
+//     res.json(JSON.parse(data));
+//   });
+// });
 
 app.get("/*", (req, res) => {
   // res.send("<h1>hello world</h1>");
