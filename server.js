@@ -60,6 +60,11 @@ app.post("/api/notes", (req, res) => {
   }
 });
 
+app.delete("/api/notes/:id", (req, res) => {
+  let id = req.params.id;
+  delete database[id];
+});
+
 app.get("/*", (req, res) => {
   // res.send("<h1>hello world</h1>");
   res.sendFile(path.join(__dirname, "/public/index.html"), (err) => {
