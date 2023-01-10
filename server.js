@@ -17,6 +17,7 @@ app.get("/notes", (req, res) => {
   res.sendFile(path.join(__dirname, "public/notes.html"));
 });
 
+//GET route that takes the data from the json file and displays it to the left side of the page
 app.get("/api/notes", (req, res) => {
   fs.readFile("./db/db.json", "utf8", (err, data) => {
     res.json(JSON.parse(data));
@@ -24,6 +25,7 @@ app.get("/api/notes", (req, res) => {
   // console.info(database);
 });
 
+// POST route which creates a new note
 app.post("/api/notes", (req, res) => {
   console.info(`${req.method} request received to add a note`);
 
@@ -68,6 +70,7 @@ app.post("/api/notes", (req, res) => {
 //   });
 // });
 
+//Default route that will send the user back to the index.html if a non specified route is taken
 app.get("/*", (req, res) => {
   // res.send("<h1>hello world</h1>");
   res.sendFile(path.join(__dirname, "/public/index.html"), (err) => {
