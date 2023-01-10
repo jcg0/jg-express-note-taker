@@ -1,5 +1,17 @@
 # Note Taker Starter Code
 
+## Description
+
+for this assignment I needed to create the backend and then connect it to the front end to create and display the new notes. This was a challenging assignment at first and I was pretty lost, but looking back through the class activities i was able to really piece togther what I needed to write in the app. The app is designed to be a note taking app. When you enter a note title and then note text you c an save the note to a list. The user is also able to create a new note or delete notes.
+
+https://express-note-taker-app.herokuapp.com/
+
+https://github.com/jcg0/jg-express-note-taker
+
+![Screenshot 2023-01-09 at 8 20 44 PM](https://user-images.githubusercontent.com/113564030/211440894-46a3bcb4-bae3-49d0-8c3a-7ef3d149acea.png)
+
+
+
 ## User Story
 
 - AS A small business owner
